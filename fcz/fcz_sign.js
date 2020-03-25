@@ -24,7 +24,7 @@ function sign() {
     
       if (result.signInfoVO.todaySigned='true') {
         subTitle = `签到结果: 成功`
-        detail = `获得${result.signInfoVO.credits},连签：${result.signInfoVO.continueDay}`
+        detail = `获得：${result.signInfoVO.credits}积分,连签：${result.signInfoVO.continueDay}/7天`
        } else{
         subTitle = `签到结果: 失败`
       }
