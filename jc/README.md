@@ -17,7 +17,7 @@ cn.exflux.io
 
 [rewrie_local]
 
-^https:\/\/cn\.exflux\.io\/user\/checkin url script-request-header cookie_jc.js
+^https:\/\/cn\.exflux\.io\/user\/checkin url script-request-header jc_cookie.js
 
 [task_local]
 
