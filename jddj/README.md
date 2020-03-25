@@ -12,7 +12,7 @@
 
 [MIMT]
 
-api.m.jd.com, ms.jr.jd.com
+daojia.jd.com
 
 [rewrie_local]
 
