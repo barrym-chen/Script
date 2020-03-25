@@ -14,6 +14,7 @@ wx.17u.cn
 
 [task_local]
 0 0 * * * tongc_sign.js
+1 0 * * * tongc_info.js
 ```
 ## 获取cookie说明<br>
 
