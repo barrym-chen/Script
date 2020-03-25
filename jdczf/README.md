@@ -15,7 +15,7 @@ api.m.jd.com
 
 [rewrie_local]
 
-^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/bt\/h5\/m\/queryUserSignFlow url script-request-header jdczfcookie.js
+^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/bt\/h5\/m\/queryUserSignFlow url script-request-header jdczf_cookie.js
 
 [task_local]
 
@@ -25,7 +25,7 @@ api.m.jd.com
 
 ## 获取cookie说明<br>
 
-1、需要通过京东学生认证这`是签到的基础`,<br>
+1、需要通过京东学生认证这是`签到的基础`,<br>
 
 2、点击京东app->`我的`->`小白成长分`即可获取cookie成功<br>
 
