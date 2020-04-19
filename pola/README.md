@@ -1,17 +1,13 @@
 # **泼辣修图**<br>
 
 
-
 脚本理论上该脚本兼QuanX 和 Surge，使用一份即可<br>
-
-
-
 
 
 ## 配置(Quanx)<br>
 
-```
 
+```
 [MIMT]
 
 api.polaxiong.com
@@ -21,9 +17,7 @@ api.polaxiong.com
 https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts/confirmation url script-request-body pola.js
 
 
-
 ```
-
 ## 配置(Surge)<br>
 ```
 [MIMT]
@@ -37,9 +31,6 @@ pola.js = type=http-request,pattern=^https:\/\/api\.polaxiong\.com\/v1\/payments
 
 ```
 
-
-
-
 ## 说明<br>
 
 1、需要注册并且登录泼辣修图的账户<br>
@@ -50,8 +41,8 @@ pola.js = type=http-request,pattern=^https:\/\/api\.polaxiong\.com\/v1\/payments
 * 可以忽略，只要返回界面看到图层模块解锁，就说明恢复成功<br>
 
 
-4、不成功解决办法：多次尝试<br>
-​
+3、不成功解决办法：多次尝试<br>
+
 
 ## 感谢
 
