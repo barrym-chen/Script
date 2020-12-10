@@ -37,7 +37,7 @@ http-request http-request,pattern=^http:\/\/c\.pc\.qq\.com\/middlem\.html script
 
 ## 脚本说明<br>
 
-1、无需配置MITMcookie<br>
+1、无需配置MITM<br>
 
 2、只对于不能正常在qq中打开的url生效<br>
 
