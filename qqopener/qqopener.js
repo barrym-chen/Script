@@ -1,11 +1,16 @@
 /*
 [rewrite_local]
-^^http:\/\/c\.pc\.qq\.com\/middlem\.html url script-request-header https://raw.githubusercontent.com/barrym-chen/Script/master/qqopener/qqopener.js
+
+^htps:\/\/qr\.alipay\.com\/[a-zA-Z0-9]{22} url script-request-header https://raw.githubusercontent.com/barrym-chen/Script/master/qqopener/qqopener.js
+
+^http:\/\/c\.pc\.qq\.com\/middlem\.html url script-request-header https://raw.githubusercontent.com/barrym-chen/Script/master/qqopener/qqopener.js
 **********************
 Surge 4.2.0+ 脚本配置:
 **********************
 [Script]
 qqopener.js = type=http-request,pattern=^http:\/\/c\.pc\.qq\.com\/middlem\.html,script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/qqopener/qqopener.js
+qqalipay.js=type=http-request,pattern=htps:\/\/qr\.alipay\.com\/[a-zA-Z0-9]{22},script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/qqopener/qqopener.js
+
 by @barry
 原作者@江湖中人,修改而来。
 */
