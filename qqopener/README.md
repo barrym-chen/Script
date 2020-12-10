@@ -8,6 +8,13 @@
 
 ## 配置<br>
 
+## MITM
+
+```
+host=qr.alipay.com
+
+```
+
 ##### quanx
 
 ```
