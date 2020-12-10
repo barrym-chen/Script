@@ -15,7 +15,7 @@ res=str[1]
 s=res.split("&")
 st=s[0]
 reurl=decodeURIComponent(st)
-console.log(reurl)
+//console.log(reurl)
 
 const $ = new cmp()
     $.notify(``,"", "🔗点击打开链接", reurl)
