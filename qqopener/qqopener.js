@@ -10,15 +10,23 @@ by @barry
 原作者@江湖中人,修改而来。
 */
 var str = ($request.url);
-str=str.split("=")
-res=str[1]
+function test(){
+stre=str.split("=")
+res=stre[1]
 s=res.split("&")
 st=s[0]
 reurl=decodeURIComponent(st)
+}
 //console.log(reurl)
 
 const $ = new cmp()
-    $.notify(``,"", "🔗点击打开链接", reurl)
+
+if(str.indexOf("alipay") != -1){
+  $.notify(``,"", "🔗点击支付宝链接", str)
+}else{
+test()
+  $.notify(``,"", "🔗点击打开链接", reurl)
+}
 $done();
 
 function cmp() {
