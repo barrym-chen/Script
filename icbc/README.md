@@ -4,6 +4,7 @@
 该脚本理论上该脚本兼QuanSurge，使用一份即可<br>
 
 ## 配置<br>
+#### quanx
 ```
 
 [MIMT]
