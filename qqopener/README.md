@@ -51,7 +51,11 @@ http-request ^https:\/\/qr\.alipay\.com\/[a-zA-Z0-9]{22} script-path= https://ra
 
 2、只对于不能正常在qq中打开的url生效<br>
 
-3、默认跳转到safari中打开链接
+3、默认跳转到safari中打开链接<br>
+
+4、配置mitm之后可以在qq中扫描支付宝的二维码，并且自动跳转
+
+
 
 
 ## 感谢
