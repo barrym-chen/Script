@@ -2,19 +2,35 @@
 该脚本理论上该脚本兼QuanSurge，使用一份即可<br>
 
 
-## 配置(Quanx)<br>
+## 配置<br>
+#### quanx
 ```
 [MIMT]
 wx.17u.cn
 
 
 [rewrie_local]
-^https:\/\/wx\.17u\.cn\/wcsign\/sign\/GetSignInfo url script-request-body tongc_cookie.js
+^https:\/\/wx\.17u\.cn\/wcsign\/sign\/GetSignInfo url script-request-body https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_cookie.js
 
 
 [task_local]
-0 0 * * * tongc_sign.js
-1 0 * * * tongc_info.js
+0 0 * * * https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_sign.js
+
+```
+#### surge
+```
+[Script]
+tongccookie.js=type=http-request,require-body=1,pattern=^https:\/\/wx\.17u\.cn\/wcsign\/sign\/GetSignInfo,script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_cookie.js
+tongcsign.js=type=cron,cronexp=10 0 * * *,script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_sign.js
+
+```
+
+#### Loon
+```
+[Script]
+http-request ^https:\/\/wx\.17u\.cn\/wcsign\/sign\/GetSignInfo script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_cookie.js,requires-body=true
+cron "10 0 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/tongc/tongc_sign.js
+
 ```
 ## 获取cookie说明<br>
 
