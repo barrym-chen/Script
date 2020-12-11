@@ -3,7 +3,7 @@
 
 该脚本理论上该脚本兼QuanSurge，使用一份即可<br>
 
-## 配置(Quanx)<br>
+## 配置<br>
 ```
 
 [MIMT]
@@ -12,13 +12,32 @@ icbc1.wlphp.com:8444
 
 [rewrie_local]
 
-^https:\/\/icbc1\.wlphp\.com:8444\/js\/api\/index\/signIn url script-request-body icbc_cookie.js
+^https:\/\/icbc1\.wlphp\.com:8444\/js\/api\/index\/signIn url script-request-body https://raw.githubusercontent.com/barrym-chen/Script/master/icbc/icbc_cookie.js
 
 [task_local]
 
-0 0 * * *icbc_sign.js
+0 0 * * * https://raw.githubusercontent.com/barrym-chen/Script/master/icbc/icbc_sign.js
 
 ```
+#### surge
+```
+icbccookie.js=type=http-request, require-body=1,pattern=^https:\/\/icbc1\.wlphp\.com:8444\/js\/api\/index\/signIn,script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/icbc/icbc_cookie.js
+
+icbcsign.js=cron,cronexp=11 0 * * *,script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/icbc/icbc_sign.js
+
+```
+
+
+#### Loon
+```
+http-request ^https:\/\/icbc1\.wlphp\.com:8444\/js\/api\/index\/signIn script-path=
+https://raw.githubusercontent.com/barrym-chen/Script/master/icbc/icbc_cookie.js,requires-body=true
+cron "11 0 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/icbc/icbc_sign.js
+
+```
+
+
+
 
 ## 获取cookie说明<br>
 
