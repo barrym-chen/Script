@@ -6,8 +6,8 @@
 
 
 
-## 配置(Quanx)<br>
-
+## 配置<br>
+#### quanx
 ```
 
 [MIMT]
@@ -16,14 +16,27 @@ m.ctrp.com
 
 [rewrie_local]
 
-^https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo url script-request-header ctrip_cookie.js
+^https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo url script-request-header https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip_cookie.js
 
 [task_local]
 
-0 0 * * * ctrip.js
+0 0 * * * https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip.js
 
 ```
 
+####surge
+```
+ctripcookie.js=type=http-request, requires-body=1,pattern=^https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo,script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip_cookie.js
+ctripsign.js=cron,cronexp=12 0 * * *,script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip.js
+```
+
+
+#### Loon
+```
+http-request ^https:\/\/m\.ctrip\.com\/restapi\/soa2\/14946\/json\/userBaseInfo script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip_cookie.js,requires-body=true
+cron "12 0 * * *" script-path=https://raw.githubusercontent.com/barrym-chen/Script/master/ctrip/ctrip.js
+
+```
 ## 获取cookie说明<br>
 
 1、登录携程旅行，然后点击我的，`我的积分`进入即可即可获取cookie<br>
