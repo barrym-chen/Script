@@ -1,10 +1,11 @@
 #!name=jump, by Barry
 #!desc=QQ和微信的扫码（支付宝二维码）+ 不能正常打开的url的跳转 + 浏览器UA替换为百度的简单搜索（无广告）
 #!system=ios
-# Update Time:2020-12-11
-# thanks:@江湖中人
+
 
 [Header Rewrite]
+# Update Time:2020-12-11
+# thanks:@江湖中人
 ^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com header-replace User-Agent "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SearchCraft/3.7.4 (Baidu; P2 14.0)"
 
 [MITM]
